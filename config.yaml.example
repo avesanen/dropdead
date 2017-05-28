@@ -1,0 +1,3 @@
+addr: :5001
+db_path: ./data
+uploads_path: ./data

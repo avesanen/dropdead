@@ -1,0 +1,10 @@
+version: '2'
+services:
+  dropdead:
+    build: .
+    restart: always
+    ports:
+     - "5001:5001"
+    volumes:
+     - /etc/dropdead:/etc/dropdead
+     - /mnt/usb/avesanen/dropdead:/var/dropdead

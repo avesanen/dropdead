@@ -1,0 +1,17 @@
+pipeline:
+  build:
+    image: golang
+    commands:
+      - go build
+      - go test -v
+
+deploy:
+  ssh:
+    host: matrix.glitch.fi
+    user: avesanen
+    port: 22
+    commands:
+      - cd ~/go/src/github.com/avesanen/dropdead
+      - git pull
+      - docker-compose build
+      - docker-compose up -d

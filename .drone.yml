@@ -13,10 +13,8 @@ pipeline:
   ssh:
     image: appleboy/drone-ssh
     host: matrix.glitch.fi
-    environment:
-      - DRONE_MATRIX_PRIV_KEY="$$DRONE_MATRIX_PRIV_KEY"
     username: avesanen
-    key: ${DRONE_MATRIX_PRIV_KEY}
+    key: ${SSH_KEY}
     port: 22
     script:
       - cd ~/go/src/github.com/avesanen/dropdead

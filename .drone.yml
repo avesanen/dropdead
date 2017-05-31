@@ -1,3 +1,7 @@
+workspace:
+  base: /go
+  path: src/github.com/avesanen/dropdead
+
 pipeline:
   build:
     image: golang

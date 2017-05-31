@@ -12,6 +12,7 @@ import (
 	"net/textproto"
 	"os"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -95,6 +96,8 @@ func TestShutdown(t *testing.T) {
 			assert.Fail("Dropdead shutdown prematurely.")
 		}
 	}()
+
+	time.Sleep(time.Second)
 
 	resp, err := http.Get("http://" + d.config.Addr)
 	require.NoError(err, "GET request to server should not return error.")

@@ -10,11 +10,9 @@ pipeline:
       - go build
       - go get -t
       - go test -v
-  ssh:
+  deploy:
     image: appleboy/drone-ssh
-    host: ${HOST}
-    username: ${USER}
-    key: ${SSH_KEY}
+    secrets: [host, username, key]
     port: 22
     script:
       - cd ~/go/src/github.com/avesanen/dropdead

@@ -12,8 +12,8 @@ pipeline:
       - go test -v
   ssh:
     image: appleboy/drone-ssh
-    host: matrix.glitch.fi
-    username: avesanen
+    host: ${HOST}
+    username: ${USER}
     key: ${SSH_KEY}
     port: 22
     script:

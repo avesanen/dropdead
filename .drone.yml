@@ -12,7 +12,7 @@ pipeline:
       - go test -v
   deploy:
     image: appleboy/drone-ssh
-    secrets: [host, username, key]
+    secrets: [ssh_host, ssh_username, ssh_key]
     port: 22
     script:
       - cd ~/go/src/github.com/avesanen/dropdead

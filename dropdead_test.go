@@ -97,8 +97,8 @@ func TestShutdown(t *testing.T) {
 	}()
 
 	resp, err := http.Get("http://" + d.config.Addr)
-	assert.NoError(err, "GET request to server should not return error.")
-	assert.NotNil(resp, "Response from GET request should not be nil.")
+	require.NoError(err, "GET request to server should not return error.")
+	require.NotNil(resp, "Response from GET request should not be nil.")
 	assert.Equal(200, resp.StatusCode, "Server should return 200 OK.")
 
 	canFail = true

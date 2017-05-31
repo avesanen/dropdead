@@ -12,7 +12,7 @@ const testConfigString = "addr: 127.0.0.1:1234\ndb_path: /var/dropdead\nuploads_
 func TestConfig(t *testing.T) {
 	assert := assert.New(t)
 
-	dir, err := ioutil.TempDir("", "dropdead/")
+	dir, err := ioutil.TempDir("", "dropdead-")
 	assert.NoError(err)
 
 	confFileName := dir + "/config.yml"

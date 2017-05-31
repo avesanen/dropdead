@@ -1,6 +1,8 @@
 Dropdead
 ========
 
+[![Build Status](https://drone.glitch.fi/api/badges/avesanen/dropdead/status.svg)](https://drone.glitch.fi/avesanen/dropdead)
+
 Dropdead is a small drag&drop image sharing service.
 
 

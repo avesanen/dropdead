@@ -5,6 +5,8 @@ workspace:
 pipeline:
   build:
     image: golang:1.8.3
+    environment: 
+      - TMPDIR=/tmp
     commands:
       - go get .
       - go build

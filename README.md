@@ -4,14 +4,14 @@ Dropdead
 Dropdead is a small drag&drop image sharing service.
 
 
-Requirements
-============
+Compiling Requirements
+----------------------
 
 - go v.1.8+ (uses http shutdown)
 
 
 Config Example
-==============
+--------------
 
 ```yaml
 addr: 127.0.0.1:8000
@@ -25,7 +25,7 @@ Uploads will be saved `uploads` directory under the uploads_path.
 
 
 Usage
-=====
+-----
 
 Running dropdead without parameters will create a data directory to the current location:
 

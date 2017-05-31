@@ -19,7 +19,7 @@ import (
 )
 
 func createTempDropdead() (*Dropdead, error) {
-	dir, err := ioutil.TempDir("", "dropdead/")
+	dir, err := ioutil.TempDir("", "dropdead-")
 	if err != nil {
 		return nil, err
 	}

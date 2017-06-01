@@ -12,6 +12,7 @@ pipeline:
       - go test -v
   deploy:
     image: appleboy/drone-ssh
+    secrets: [ ssh_username, ssh_host, ssh_key ]
     user: ${SSH_USERNAME}
     host: ${SSH_HOST}
     key: ${SSH_KEY}

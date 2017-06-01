@@ -15,11 +15,9 @@ pipeline:
     user: ${SSH_USERNAME}
     host: ${SSH_HOST}
     key: ${SSH_KEY}
-    secrets: [ ssh_username, ssh_host, ssh_key ]
     port: 22
     script:
       - cd ~/go/src/github.com/avesanen/dropdead
       - git pull
       - docker-compose build
       - docker-compose up -d
-
